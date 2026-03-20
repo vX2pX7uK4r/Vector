@@ -4686,7 +4686,7 @@ do --// Menu Shi
     --
 
     --// Misc
-        menu.add_group("Fallen", "Misc", 0, true)
+        menu.add_group("Fallen", "Misc")
         menu.add_slider_int("Fallen", "Misc", "esp_text_size", "ESP Text Size", 8, 24, 14)
         menu.add_checkbox("Fallen", "Misc", "mod_detector_enabled", "Enable Staff Detector", true, { key = 0 })
         menu.add_slider_int("Fallen", "Misc", "moddet_max_list", "Max List Size", 1, 20, 6, { parent = "mod_detector_enabled" })
@@ -4959,7 +4959,7 @@ do --// Menu Shi
     --// Config
         update_slot_names()
 
-        menu.add_group("Fallen", "Config")
+        menu.add_group("Fallen", "Config", 0, true)
         menu.add_combo("Fallen", "Config", "config_slot", "Config Slot", slot_display_names, 0, {
             callback = function(val)
                 local slot = val + 1
